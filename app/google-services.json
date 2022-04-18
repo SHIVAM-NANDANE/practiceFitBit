@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "589068279028",
+    "project_id": "practice-fitbit",
+    "storage_bucket": "practice-fitbit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589068279028:android:4737ce3798b9e97f4312a1",
+        "android_client_info": {
+          "package_name": "com.example.practice_fitbit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589068279028-r2a2k60c7lf3so5ui6sd2p5s2ln6iq2k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.practice_fitbit",
+            "certificate_hash": "6db890b4453b8f82fa7b3b33ae74b7039a0160a9"
+          }
+        },
+        {
+          "client_id": "589068279028-q5n7c9qf9sl3uktapc15ilu4q900vg5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi4w0GGyDUBMT4ty8SkcbeskgexGC04OM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589068279028-q5n7c9qf9sl3uktapc15ilu4q900vg5t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

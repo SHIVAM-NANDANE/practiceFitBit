@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <!--We are going to use linearlayout for this application-->
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/vegdietid"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".DietPlan">
+
+<Switch
+        android:id="@+id/switchButton"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vegetarian"
+        />
+
+<pl.droidsonroids.gif.GifImageView
+        android:id="@+id/veg"
+        android:layout_width="410dp"
+        android:layout_height="280dp"
+        android:src="@drawable/vegbowl"
+        android:scaleType="fitXY"
+/>
+
+<TextView android:layout_width="410dp"
+          android:layout_height="wrap_content"
+          android:text="VEG BOWL"
+          android:textColor="@color/black"
+          android:textSize="30dp"
+          android:paddingLeft="125dp"
+          android:background="#34c759"
+
+/>
+
+<TextView android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Contents"
+          android:textColor="@color/black"
+          android:textSize="24dp"
+          android:layout_marginTop="5dp"
+          android:background="#56ED1F"
+/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="265dp"
+                  android:text="@string/vegbowl"
+                  android:textSize="16dp"
+                  android:textColor="@color/black"
+        />
+
+
+
+
+
+
+</LinearLayout>

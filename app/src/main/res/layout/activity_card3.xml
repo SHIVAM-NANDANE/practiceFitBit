@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#020D53" >
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Card3">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Push up"
+                  android:id="@+id/textview3"
+                  android:gravity="center"
+                  android:textColor="@color/white"
+                  android:textSize="25sp"
+                  android:textStyle="bold"
+        />
+
+
+        <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/pushup"
+                android:layout_width="410dp"
+                android:layout_height="300dp"
+                android:src="@drawable/pushup"
+                android:layout_below="@+id/textview3"
+                android:scaleType="fitXY"
+
+        />
+
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:paddingTop="25sp"
+                  android:text="@string/Pushup"
+                  android:gravity="center"
+                  android:textColor="#FDFDFD"
+                  android:textSize="18dp"
+                  android:layout_below="@+id/pushup"
+                  android:layout_marginTop="11dp"/>
+
+    </RelativeLayout>
+</ScrollView>
