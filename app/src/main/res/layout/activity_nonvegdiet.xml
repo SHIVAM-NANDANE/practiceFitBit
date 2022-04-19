@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--We are going to use linearlayout for this application-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".Nonvegdiet">
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,9 +20,14 @@
     <Switch
             android:id="@+id/switchButton"
             android:checked="false"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:text="Non-Vegetarian"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:background="#FD0505"
+            android:textStyle="bold"
+            android:paddingLeft="240dp"
     />
 
     <pl.droidsonroids.gif.GifImageView
@@ -31,9 +43,9 @@
               android:textAllCaps="true"
               android:text="Non-Veg Bowl"
               android:layout_marginTop="5dp"
-              android:textColor="@color/black"
+              android:textColor="@color/white"
               android:textSize="30dp"
-              android:paddingLeft="125dp"
+              android:paddingLeft="115dp"
               android:background="#F80505"
 
     />
@@ -41,10 +53,10 @@
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="Contents"
-              android:textColor="@color/black"
+              android:textColor="@color/white"
               android:textSize="24dp"
               android:layout_marginTop="5dp"
-              android:background="#EF800A"
+              android:background="#F80505"
     />
 
     <TextView android:layout_width="wrap_content"
@@ -58,3 +70,4 @@
 
 
 </LinearLayout>
+        </ScrollView>

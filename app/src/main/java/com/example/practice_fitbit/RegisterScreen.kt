@@ -6,13 +6,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
-import android.view.View
 import android.widget.Toast
-//import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.practice_fitbit.databinding.ActivityRegisterScreenBinding
-//import com.example.myapp.R
-import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import java.util.regex.Pattern
 
@@ -128,7 +124,7 @@ class RegisterScreen() : AppCompatActivity() {
                     "(?=.*[@#$%^&+=])" +  // at least 1 special character
                     "(?=\\S+$)" +  // no white spaces
                     ".{4,}" +  // at least 4 characters
-                    "$"
+                    "$"         //Allowed
         )
     }
 }

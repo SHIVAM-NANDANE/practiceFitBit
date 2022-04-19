@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
         <!--We are going to use linearlayout for this application-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            tools:context=".DietPlan">
 <LinearLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,9 +20,15 @@ tools:context=".DietPlan">
 <Switch
         android:id="@+id/switchButton"
         android:checked="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:text="Vegetarian"
+        android:paddingTop="12dp"
+        android:gravity="right"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:background="#0FAF15"
+        android:textStyle="bold"
         />
 
 <pl.droidsonroids.gif.GifImageView
@@ -29,20 +42,21 @@ tools:context=".DietPlan">
 <TextView android:layout_width="410dp"
           android:layout_height="wrap_content"
           android:text="VEG BOWL"
-          android:textColor="@color/black"
+          android:textColor="@color/white"
           android:textSize="30dp"
+          android:layout_marginTop="5dp"
           android:paddingLeft="125dp"
-          android:background="#34c759"
+          android:background="#0FAF15"
 
 />
 
 <TextView android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Contents"
-          android:textColor="@color/black"
+          android:textColor="@color/white"
           android:textSize="24dp"
           android:layout_marginTop="5dp"
-          android:background="#56ED1F"
+          android:background="#0FAF15"
 />
         <TextView android:layout_width="wrap_content"
                   android:layout_height="265dp"
@@ -57,3 +71,4 @@ tools:context=".DietPlan">
 
 
 </LinearLayout>
+</ScrollView>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import com.example.practice_fitbit.databinding.ActivityMainBinding
 
@@ -24,6 +25,7 @@ class HomeScreen : AppCompatActivity() {
     private lateinit var cardno4 : CardView
     private lateinit var cardno5 : CardView
     private lateinit var cardno6 : CardView
+    private lateinit var rotateimage : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,17 +40,18 @@ class HomeScreen : AppCompatActivity() {
         cardno4 = findViewById(R.id.card4)
         cardno5 = findViewById(R.id.card5)
         cardno6 = findViewById(R.id.card6)
-
+        rotateimage = findViewById(R.id.rotatingimage)
 
         logout_Button.setOnClickListener {
             startActivity(Intent(this,LoginScreen::class.java))
             finish()
+
         }
 
 
         dietimg.setOnClickListener {
             startActivity(Intent(this,DietPlan::class.java))
-            finish()
+
         }
 
 
@@ -76,9 +79,18 @@ class HomeScreen : AppCompatActivity() {
             startActivity(Intent(this,Card6::class.java))
         }
 
-        val Rotate = AnimationUtils.loadAnimation(this,R.anim.clockwise)
+        // loading the animation of
+        // clockwise.xml file into a variable
+        val rotate = AnimationUtils.loadAnimation(
+            this,
+            R.anim.clockwise
+        )
+
+        // assigning that animation to
+        // the image and start animation
+        rotateimage.startAnimation(rotate)
+    }
 
 
 
     }
-}

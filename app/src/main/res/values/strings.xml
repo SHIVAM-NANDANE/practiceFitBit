@@ -153,23 +153,32 @@
         your feet. \n \n \n \n \n \n \n\n
 
     </string>
-    <string name="vegbowl">\t Paneer 50gm , \t Some grain: rice / millets , <br>\t Some protein: dal / beans / peanuts / sattu ,\t</br>
-        <br>Some cooked vegetables , \t  Crunchy toppings: raw salad \t </br>
+    <string name="vegbowl"><br> Paneer 50gm , </br>  <br>Some grain: rice / millets , \n  </br> <br>Some protein: dal / beans / peanuts / sattu ,</br> \n
+        <br>Some cooked vegetables , \n </br> <br>Crunchy toppings: raw salad \n  </br>
 
         <br> </br>
 
-        <br> Cook everything on low flame. \n </br>
-        <br> </br>
-        <br>
-        <b>Protein Values :</b> <br> </br>50gm Panner Protein 22g ,\t<br> </br>
-        50gm dal Protein 12.9g , \t<br> </br>
-        50gm dal peanuts 13 g \t</br>
+        <br>\n Cook everything on low flame. \n  \n </br>
+
+        <b>Protein Values :</b> \n  <br> </br>50gm Panner Protein 22g ,\n<br> </br>
+        50gm dal Protein 12.9g , \n<br> </br>
+        50gm dal peanuts 13 g
 
 
 
 
     </string>
-    <string name="nonvegbowl">50 gm chicken</string>
+    <string name="nonvegbowl"> <br>50 gm chicken breasts, \n </br>  <br> 1/2 cup boiled chickpeas, \n </br> <br>1/2 cup boiled rice, \n </br> <br>50gm cheese, \n </br> <br>4 Eggs \n \n</br><br> </br>
+        <b>Protein Values  :\n </b> 50 gm chicken has  14 grams of protein \n <br> </br>
+        1/2 cup boiled chickpeas has 10 grams of protein \n<br> </br>
+        1/2 cup boiled rice has  2 grams of protein \n <br> </br>
+        50gm cheese has 13 grams of protein \n <br> </br>
+        4 Eggs has 24 grams of protein \n <br> </br>
+
+
+
+
+    </string>
 
 
 </resources>
