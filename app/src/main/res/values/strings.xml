@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Practice_FitBit</string>
+    <string name="app_name">
+        <b>
+            <h3>FitBit</h3>
+        </b>
+    </string>
     <string name="register">New here?
         <b>Register</b>
     </string>
@@ -153,29 +157,45 @@
         your feet. \n \n \n \n \n \n \n\n
 
     </string>
-    <string name="vegbowl"><br> Paneer 50gm , </br>  <br>Some grain: rice / millets , \n  </br> <br>Some protein: dal / beans / peanuts / sattu ,</br> \n
-        <br>Some cooked vegetables , \n </br> <br>Crunchy toppings: raw salad \n  </br>
+    <string name="vegbowl">
+        <br>Paneer 50gm ,</br>
+        <br>Some grain: rice / millets , \n</br>
+        <br>Some protein: dal / beans / peanuts / sattu ,</br>
+        \n
+        <br>Some cooked vegetables , \n</br>
+        <br>Crunchy toppings: raw salad \n</br>
 
-        <br> </br>
+        <br></br>
 
-        <br>\n Cook everything on low flame. \n  \n </br>
+        <br>\n Cook everything on low flame. \n \n</br>
 
-        <b>Protein Values :</b> \n  <br> </br>50gm Panner Protein 22g ,\n<br> </br>
-        50gm dal Protein 12.9g , \n<br> </br>
+        <b>Protein Values :</b>
+        \n  <br></br>50gm Panner Protein 22g ,\n
+        <br></br>
+        50gm dal Protein 12.9g , \n
+        <br></br>
         50gm dal peanuts 13 g
 
 
-
-
     </string>
-    <string name="nonvegbowl"> <br>50 gm chicken breasts, \n </br>  <br> 1/2 cup boiled chickpeas, \n </br> <br>1/2 cup boiled rice, \n </br> <br>50gm cheese, \n </br> <br>4 Eggs \n \n</br><br> </br>
-        <b>Protein Values  :\n </b> 50 gm chicken has  14 grams of protein \n <br> </br>
-        1/2 cup boiled chickpeas has 10 grams of protein \n<br> </br>
-        1/2 cup boiled rice has  2 grams of protein \n <br> </br>
-        50gm cheese has 13 grams of protein \n <br> </br>
-        4 Eggs has 24 grams of protein \n <br> </br>
-
-
+    <string name="nonvegbowl">
+        <br>50 gm chicken breasts, \n</br>
+        <br>1/2 cup boiled chickpeas, \n</br>
+        <br>1/2 cup boiled rice, \n</br>
+        <br>50gm cheese, \n</br>
+        <br>4 Eggs \n \n</br>
+        <br></br>
+        <b>Protein Values :\n</b>
+        50 gm chicken has 14 grams of protein \n
+        <br></br>
+        1/2 cup boiled chickpeas has 10 grams of protein \n
+        <br></br>
+        1/2 cup boiled rice has 2 grams of protein \n
+        <br></br>
+        50gm cheese has 13 grams of protein \n
+        <br></br>
+        4 Eggs has 24 grams of protein \n
+        <br></br>
 
 
     </string>

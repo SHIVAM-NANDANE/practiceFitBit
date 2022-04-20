@@ -20,12 +20,11 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="FOCUS AREA"
+            android:text="FitBit"
             android:textStyle="bold"
             android:textSize="24dp"
             android:textColor="@color/white"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="120dp">
+    >
     </TextView>
     <ImageButton android:layout_width="40dp"
                  android:layout_height="40dp"

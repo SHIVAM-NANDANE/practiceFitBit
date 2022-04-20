@@ -10,6 +10,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Practice_FitBit">
         <activity
+                android:name=".Profile"
+                android:exported="true"/>
+        <activity
+                android:name=".Dashboard"
+                android:exported="true"/>
+        <activity
                 android:name=".Nonvegdiet"
                 android:exported="true"/>
         <activity

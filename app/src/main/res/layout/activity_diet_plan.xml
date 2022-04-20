@@ -65,10 +65,5 @@ tools:context=".DietPlan">
                   android:textColor="@color/black"
         />
 
-
-
-
-
-
 </LinearLayout>
 </ScrollView>

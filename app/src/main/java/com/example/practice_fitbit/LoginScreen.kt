@@ -78,6 +78,8 @@ class LoginScreen() : AppCompatActivity() {
         }
     }
 
+    //Accesing firebase here
+
     private fun firebaseLogin() {
         //show progress
         progressDialog.show()
@@ -89,8 +91,8 @@ class LoginScreen() : AppCompatActivity() {
                 val firebaseUser = firebaseAuth.currentUser
                 val email = firebaseUser!!.email
                 Toast.makeText(this,"Logged in as $email",Toast.LENGTH_SHORT).show()
-                //open Homepage
-                startActivity(Intent(this,VideoActivity::class.java))
+                //open Dashboard
+                startActivity(Intent(this,Dashboard::class.java))
                 finish()
             }
             .addOnFailureListener{ e->
