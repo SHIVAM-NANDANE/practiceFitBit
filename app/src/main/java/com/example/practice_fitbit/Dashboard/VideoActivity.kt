@@ -1,4 +1,4 @@
-package com.example.practice_fitbit
+package com.example.practice_fitbit.Dashboard
 
 import android.content.Intent
 import android.net.Uri
@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
+import com.example.practice_fitbit.MainScreens.HomeScreen
+import com.example.practice_fitbit.R
 
 class VideoActivity : AppCompatActivity() {
     // declaring a null variable for VideoView
@@ -38,7 +40,8 @@ class VideoActivity : AppCompatActivity() {
             // set the absolute path of the video file which is going to be played
             simpleVideoView!!.setVideoURI(
                 Uri.parse("android.resource://"
-                    + packageName + "/" + R.raw.videoview1))
+                    + packageName + "/" + R.raw.videoview1
+                ))
 
             simpleVideoView!!.requestFocus()
 
@@ -61,7 +64,7 @@ class VideoActivity : AppCompatActivity() {
             }
 
             skip_btn.setOnClickListener {
-                startActivity(Intent(this,HomeScreen::class.java))
+                startActivity(Intent(this, HomeScreen::class.java))
                 finish()
             }
 

@@ -5,8 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Profile"
-        android:background="#020D53"
+        tools:context=".Dashboard.Profile"
+        android:background="@drawable/profileback"
         android:padding="20dp"
 >
 
@@ -18,88 +18,156 @@
             android:src="@drawable/profile1"
     />
 
-    <TextView android:layout_width="match_parent"
+    <EditText android:layout_width="match_parent"
               android:layout_height="50dp"
               android:id="@+id/nameview"
               android:layout_below="@+id/profilelogo"
-              android:layout_marginTop="30dp"
+              android:layout_marginTop="40dp"
               android:hint="Enter Name"
+              android:textColorHint="@color/black"
               android:textSize="24dp"
               android:gravity="center"
               android:background="@android:drawable/btn_default"
-              android:layout_marginLeft="30dp"
+
     />
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="320dp"
+            android:background="#CFC6C6"
+    >
 
-    <TextView android:layout_width="200dp"
-              android:layout_height="50dp"
-              android:id="@+id/ageview"
-              android:textColor="@color/black"
-              android:layout_below="@+id/profilelogo"
-              android:layout_marginTop="100dp"
-              android:text="Age"
-              android:textSize="24dp"
-              android:gravity="center"
-              android:background="@android:drawable/btn_default"
-              android:layout_marginLeft="30dp"
-    />
+        <AutoCompleteTextView
+                android:id="@+id/autoComplete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Age"
+                android:layout_weight="1"
+                android:textColorHint="@color/black"
+                android:inputType="none"
 
-    <TextView android:layout_width="200dp"
-              android:layout_height="50dp"
-              android:id="@+id/heightview"
-              android:textColor="@color/black"
-              android:layout_below="@+id/ageview"
-              android:layout_marginTop="30dp"
-              android:text="Height"
-              android:textSize="24dp"
-              android:gravity="center"
-              android:background="@android:drawable/btn_default"
-              android:layout_marginLeft="30dp"
-    />
+        >
 
-    <TextView android:layout_width="200dp"
-              android:layout_height="50dp"
-              android:textColor="@color/black"
-              android:layout_below="@+id/heightview"
-              android:layout_marginTop="30dp"
-              android:text="Weight"
-              android:textSize="24dp"
-              android:gravity="center"
-              android:background="@android:drawable/btn_default"
-              android:layout_marginLeft="30dp"
-    />
+        </AutoCompleteTextView>
 
-    <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="270dp"
-            android:layout_marginTop="100dp"
-            android:layout_below="@+id/profilelogo"
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:background="#CFC6C6"
+    >
+
+        <AutoCompleteTextView
+                android:id="@+id/height"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Height"
+                android:layout_weight="1"
+                android:textColorHint="@color/black"
+                android:inputType="none"
+
+        >
+
+        </AutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="485dp"
+            android:background="#CFC6C6"
+    >
+
+        <AutoCompleteTextView
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Wieght"
+                android:layout_weight="1"
+                android:textColorHint="@color/black"
+                android:inputType="none"
+
+        >
+
+        </AutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown"/>
+    <!--    <TextView android:layout_width="150dp"-->
+<!--              android:layout_height="50dp"-->
+<!--              android:id="@+id/ageview"-->
+<!--              android:textColor="@color/black"-->
+<!--              android:layout_below="@+id/profilelogo"-->
+<!--              android:layout_marginTop="100dp"-->
+<!--              android:text="Age"-->
+<!--              android:textSize="24dp"-->
+<!--              android:gravity="center"-->
+<!--              android:background="@android:drawable/btn_default"-->
+<!--              android:layout_marginLeft="30dp"-->
+<!--    />-->
+
+<!--    <TextView android:layout_width="150dp"-->
+<!--              android:layout_height="50dp"-->
+<!--              android:id="@+id/heightview"-->
+<!--              android:textColor="@color/black"-->
+<!--              android:layout_below="@+id/ageview"-->
+<!--              android:layout_marginTop="30dp"-->
+<!--              android:text="Height"-->
+<!--              android:textSize="24dp"-->
+<!--              android:gravity="center"-->
+<!--              android:background="@android:drawable/btn_default"-->
+<!--              android:layout_marginLeft="30dp"-->
+<!--    />-->
+
+<!--    <TextView android:layout_width="150dp"-->
+<!--              android:layout_height="50dp"-->
+<!--              android:textColor="@color/black"-->
+<!--              android:layout_below="@+id/heightview"-->
+<!--              android:layout_marginTop="30dp"-->
+<!--              android:text="Weight"-->
+<!--              android:textSize="24dp"-->
+<!--              android:gravity="center"-->
+<!--              android:background="@android:drawable/btn_default"-->
+<!--              android:layout_marginLeft="30dp"-->
+<!--    />-->
+
+<!--    <Spinner-->
+<!--            android:id="@+id/spinner1"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginLeft="220dp"-->
+<!--            android:layout_marginTop="100dp"-->
+<!--            android:layout_below="@+id/profilelogo"-->
+<!--            android:entries="@array/age_list"-->
+<!--            android:background="@android:drawable/btn_dropdown"-->
+<!--            android:spinnerMode="dropdown"/>-->
 
 
+<!--    <Spinner-->
+<!--            android:id="@+id/spinner2"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginLeft="220dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_below="@+id/spinner1"-->
+<!--            android:background="@android:drawable/btn_dropdown"-->
+<!--            android:spinnerMode="dropdown"/>-->
 
-    <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="270dp"
-            android:layout_marginTop="30dp"
-            android:layout_below="@+id/spinner1"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown"/>
-
-    <Spinner
-            android:id="@+id/spinner3"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="270dp"
-            android:layout_marginTop="30dp"
-            android:layout_below="@+id/spinner2"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown"/>
+<!--    <Spinner-->
+<!--            android:id="@+id/spinner3"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginLeft="220dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_below="@+id/spinner2"-->
+<!--            android:background="@android:drawable/btn_dropdown"-->
+<!--            android:spinnerMode="dropdown"/>-->
 
 </RelativeLayout>

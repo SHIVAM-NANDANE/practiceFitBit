@@ -1,4 +1,4 @@
-package com.example.practice_fitbit
+package com.example.practice_fitbit.MainScreens
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,7 @@ import android.util.Log
 import android.util.Patterns
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
+import com.example.practice_fitbit.R
 import com.example.practice_fitbit.databinding.ActivityMainBinding
 
 const val SPLASH_TIME = 4000L
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         Handler(Looper.myLooper()!!).postDelayed(
             {
-                val intent= Intent(this,LoginScreen::class.java)
+                val intent= Intent(this, LoginScreen::class.java)
                 startActivity(intent)
                 finish()
             },
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("MainActivity","is valid email $it => ${isValidString(it)}")
         }
 
-        val fadeInAnim = AnimationUtils.loadAnimation(this,R.anim.anim)
+        val fadeInAnim = AnimationUtils.loadAnimation(this, R.anim.anim)
         binding.textview1.animation=fadeInAnim
     }
 }

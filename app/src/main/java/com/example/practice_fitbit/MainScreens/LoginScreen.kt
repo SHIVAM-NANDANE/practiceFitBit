@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.example.practice_fitbit
+package com.example.practice_fitbit.MainScreens
 
 
 import android.app.ProgressDialog
@@ -10,6 +10,7 @@ import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.practice_fitbit.Dashboard.Dashboard
 import com.example.practice_fitbit.databinding.ActivityLoginScreenBinding
 import com.google.firebase.auth.FirebaseAuth
 import java.util.regex.Pattern
@@ -45,7 +46,7 @@ class LoginScreen() : AppCompatActivity() {
 
         //handle click, Open registerScreen
         binding.reg.setOnClickListener{
-            startActivity(Intent(this,RegisterScreen::class.java))
+            startActivity(Intent(this, RegisterScreen::class.java))
         }
 
         //handle click, begin login
@@ -92,7 +93,7 @@ class LoginScreen() : AppCompatActivity() {
                 val email = firebaseUser!!.email
                 Toast.makeText(this,"Logged in as $email",Toast.LENGTH_SHORT).show()
                 //open Dashboard
-                startActivity(Intent(this,Dashboard::class.java))
+                startActivity(Intent(this, Dashboard::class.java))
                 finish()
             }
             .addOnFailureListener{ e->

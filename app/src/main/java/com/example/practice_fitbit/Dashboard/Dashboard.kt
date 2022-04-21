@@ -1,10 +1,13 @@
-package com.example.practice_fitbit
+package com.example.practice_fitbit.Dashboard
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.cardview.widget.CardView
+import com.example.practice_fitbit.MainScreens.HomeScreen
+import com.example.practice_fitbit.MainScreens.LoginScreen
+import com.example.practice_fitbit.R
 
 class Dashboard : AppCompatActivity() {
 
@@ -22,14 +25,14 @@ class Dashboard : AppCompatActivity() {
         acclogo = findViewById(R.id.accountlogo)
 
         logout_Button.setOnClickListener {
-            startActivity(Intent(this,LoginScreen::class.java))
+            startActivity(Intent(this, LoginScreen::class.java))
             finish()
 
         }
 
 
         acclogo.setOnClickListener {
-            startActivity(Intent(this,Profile::class.java))
+            startActivity(Intent(this, Profile::class.java))
 
         }
 
@@ -38,15 +41,15 @@ class Dashboard : AppCompatActivity() {
         video =findViewById(R.id.video)
 
         exercises.setOnClickListener {
-            startActivity(Intent(this,HomeScreen::class.java))
+            startActivity(Intent(this, HomeScreen::class.java))
         }
 
         dietplan.setOnClickListener {
-            startActivity(Intent(this,DietPlan::class.java))
+            startActivity(Intent(this, DietPlan::class.java))
         }
 
         video.setOnClickListener {
-            startActivity(Intent(this,VideoActivity::class.java))
+            startActivity(Intent(this, VideoActivity::class.java))
         }
     }
 }

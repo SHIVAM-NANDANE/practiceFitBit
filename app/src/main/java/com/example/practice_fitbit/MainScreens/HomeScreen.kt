@@ -1,14 +1,15 @@
-package com.example.practice_fitbit
+package com.example.practice_fitbit.MainScreens
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
-import com.example.practice_fitbit.databinding.ActivityMainBinding
+import com.example.practice_fitbit.Cards.*
+import com.example.practice_fitbit.Dashboard.DietPlan
+import com.example.practice_fitbit.R
 
 const val Rotation_Time = 4000L
 
@@ -43,40 +44,40 @@ class HomeScreen : AppCompatActivity() {
         rotateimage = findViewById(R.id.rotatingimage)
 
         logout_Button.setOnClickListener {
-            startActivity(Intent(this,LoginScreen::class.java))
+            startActivity(Intent(this, LoginScreen::class.java))
             finish()
 
         }
 
 
         dietimg.setOnClickListener {
-            startActivity(Intent(this,DietPlan::class.java))
+            startActivity(Intent(this, DietPlan::class.java))
 
         }
 
 
         cardno1.setOnClickListener {
-            startActivity(Intent(this,Card1::class.java))
+            startActivity(Intent(this, Card1::class.java))
         }
 
         cardno2.setOnClickListener {
-            startActivity(Intent(this,Card2::class.java))
+            startActivity(Intent(this, Card2::class.java))
         }
 
         cardno3.setOnClickListener {
-            startActivity(Intent(this,Card3::class.java))
+            startActivity(Intent(this, Card3::class.java))
         }
 
         cardno4.setOnClickListener {
-            startActivity(Intent(this,Card4::class.java))
+            startActivity(Intent(this, Card4::class.java))
         }
 
         cardno5.setOnClickListener {
-            startActivity(Intent(this,Card5::class.java))
+            startActivity(Intent(this, Card5::class.java))
         }
 
         cardno6.setOnClickListener {
-            startActivity(Intent(this,Card6::class.java))
+            startActivity(Intent(this, Card6::class.java))
         }
 
         // loading the animation of

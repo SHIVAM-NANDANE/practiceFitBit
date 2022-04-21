@@ -1,10 +1,11 @@
-package com.example.practice_fitbit
+package com.example.practice_fitbit.Dashboard
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Switch
 import android.widget.Toast
+import com.example.practice_fitbit.R
 
 class Nonvegdiet : AppCompatActivity() {
 
@@ -21,7 +22,7 @@ class Nonvegdiet : AppCompatActivity() {
             if (b){
                 // when switch button is checked
 
-                startActivity(Intent(this,DietPlan::class.java))
+                startActivity(Intent(this, DietPlan::class.java))
 
             }else{
                 // if switch button is unchecked

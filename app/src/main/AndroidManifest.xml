@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.practice_fitbit">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher_2"
@@ -10,49 +12,49 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Practice_FitBit">
         <activity
-                android:name=".Profile"
+                android:name=".Dashboard.Profile"
                 android:exported="true"/>
         <activity
-                android:name=".Dashboard"
+                android:name=".Dashboard.Dashboard"
                 android:exported="true"/>
         <activity
-                android:name=".Nonvegdiet"
+                android:name=".Dashboard.Nonvegdiet"
                 android:exported="true"/>
         <activity
-                android:name=".DietPlan"
+                android:name=".Dashboard.DietPlan"
                 android:exported="true"/>
         <activity
-                android:name=".VideoActivity"
+                android:name=".Dashboard.VideoActivity"
                 android:exported="true"/>
         <activity
-                android:name=".Card6"
+                android:name=".Cards.Card6"
                 android:exported="true"/>
         <activity
-                android:name=".Card5"
+                android:name=".Cards.Card5"
                 android:exported="true"/>
         <activity
-                android:name=".Card4"
+                android:name=".Cards.Card4"
                 android:exported="true"/>
         <activity
-                android:name=".Card3"
+                android:name=".Cards.Card3"
                 android:exported="true"/>
         <activity
-                android:name=".Card2"
+                android:name=".Cards.Card2"
                 android:exported="true"/>
         <activity
-                android:name=".Card1"
+                android:name=".Cards.Card1"
                 android:exported="true"/>
         <activity
-                android:name=".HomeScreen"
+                android:name=".MainScreens.HomeScreen"
                 android:exported="true"/>
         <activity
-                android:name=".RegisterScreen"
+                android:name=".MainScreens.RegisterScreen"
                 android:exported="true"/>
         <activity
-                android:name=".LoginScreen"
+                android:name=".MainScreens.LoginScreen"
                 android:exported="true"/>
         <activity
-                android:name=".MainActivity"
+                android:name=".MainScreens.MainActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

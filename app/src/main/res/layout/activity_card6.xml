@@ -7,7 +7,7 @@
             android:background="#020D53"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".Card6">
+            tools:context=".Cards.Card6">
 
     <androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
                                        android:layout_height="wrap_content"

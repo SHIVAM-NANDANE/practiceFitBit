@@ -1,4 +1,4 @@
-package com.example.practice_fitbit
+package com.example.practice_fitbit.MainScreens
 
 
 import android.app.ProgressDialog
@@ -45,7 +45,7 @@ class RegisterScreen() : AppCompatActivity() {
 
         //handle click, Open loginScreen
         binding.reg.setOnClickListener{
-            startActivity(Intent(this,LoginScreen::class.java))
+            startActivity(Intent(this, LoginScreen::class.java))
         }
 
         //handle click, begin register

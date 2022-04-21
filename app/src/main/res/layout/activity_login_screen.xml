@@ -10,7 +10,7 @@
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".MainActivity"
+            tools:context=".MainScreens.MainActivity"
             android:padding="60dp"
     >
         <TextView
