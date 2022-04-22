@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/common_toolbar"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white"
+        android:background="#020D53">
+
+
+    <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/homelogo"
+            android:layout_marginLeft="195dp"
+            android:background="#020D53"
+            android:src="@drawable/exerciselogo2"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+
+
+    />
+
+
+    <ImageButton
+            android:id="@+id/profilelogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#020D53"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            android:layout_marginTop="10dp"
+    />
+
+    <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/logoutbtn"
+            android:background="#020D53"
+            android:src="@drawable/ic_baseline_logout_24"
+    />
+
+</androidx.appcompat.widget.Toolbar>

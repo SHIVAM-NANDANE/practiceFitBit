@@ -8,6 +8,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import com.example.practice_fitbit.MainScreens.LoginScreen
 import com.example.practice_fitbit.Dashboard.Profile
+import com.example.practice_fitbit.MainScreens.HomeScreen
 import com.example.practice_fitbit.R
 
 class Card6 : AppCompatActivity() {
@@ -15,13 +16,20 @@ class Card6 : AppCompatActivity() {
     private lateinit var jumpingscroll: TextView
     private lateinit var logout_Button : ImageButton
     private lateinit var acclogo : ImageButton
+    private lateinit var homeimg : ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_card6)
 
         logout_Button = findViewById(R.id.logoutbtn)
-        acclogo = findViewById(R.id.accountlogo)
+        acclogo = findViewById(R.id.profilelogo)
+        homeimg = findViewById(R.id.homelogo)
+
+        homeimg.setOnClickListener {
+            startActivity(Intent(this, HomeScreen::class.java))
+
+        }
 
         logout_Button.setOnClickListener {
             startActivity(Intent(this, LoginScreen::class.java))

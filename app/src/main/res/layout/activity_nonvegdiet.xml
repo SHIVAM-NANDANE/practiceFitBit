@@ -17,6 +17,8 @@
         android:orientation="vertical"
         tools:context=".Dashboard.Nonvegdiet">
 
+    <include layout="@layout/common_toolbar"/>
+
     <Switch
             android:id="@+id/switchButton"
             android:checked="false"

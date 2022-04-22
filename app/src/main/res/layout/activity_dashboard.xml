@@ -36,10 +36,11 @@
             android:background="#020D53"
             android:src="@drawable/ic_baseline_logout_24"
             android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
     />
     <androidx.cardview.widget.CardView
             android:layout_width="350dp"
-            android:layout_height="170dp"
+            android:layout_height="200dp"
             android:id="@+id/excercises"
             android:layout_marginTop="80dp"
             android:backgroundTint="#020D53"
@@ -66,9 +67,9 @@
 
     <androidx.cardview.widget.CardView
             android:layout_width="350dp"
-            android:layout_height="170dp"
+            android:layout_height="200dp"
             android:id="@+id/diet"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="300dp"
             android:layout_centerHorizontal="true"
             app:cardCornerRadius="20dp"
     >
@@ -90,9 +91,9 @@
 
     <androidx.cardview.widget.CardView
             android:layout_width="350dp"
-            android:layout_height="170dp"
+            android:layout_height="200dp"
             android:id="@+id/video"
-            android:layout_marginTop="480dp"
+            android:layout_marginTop="530dp"
             android:layout_centerHorizontal="true"
             app:cardCornerRadius="20dp"
     >

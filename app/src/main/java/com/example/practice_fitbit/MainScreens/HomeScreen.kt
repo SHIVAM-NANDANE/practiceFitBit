@@ -8,6 +8,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import com.example.practice_fitbit.Cards.*
+import com.example.practice_fitbit.Dashboard.Dashboard
 import com.example.practice_fitbit.Dashboard.DietPlan
 import com.example.practice_fitbit.R
 
@@ -27,6 +28,9 @@ class HomeScreen : AppCompatActivity() {
     private lateinit var cardno5 : CardView
     private lateinit var cardno6 : CardView
     private lateinit var rotateimage : ImageView
+    private lateinit var homeimg : ImageButton
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +46,13 @@ class HomeScreen : AppCompatActivity() {
         cardno5 = findViewById(R.id.card5)
         cardno6 = findViewById(R.id.card6)
         rotateimage = findViewById(R.id.rotatingimage)
+        homeimg = findViewById(R.id.homelogo)
+
+        homeimg.setOnClickListener {
+            startActivity(Intent(this, Dashboard::class.java))
+
+        }
+
 
         logout_Button.setOnClickListener {
             startActivity(Intent(this, LoginScreen::class.java))

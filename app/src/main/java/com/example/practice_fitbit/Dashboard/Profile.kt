@@ -2,6 +2,7 @@ package com.example.practice_fitbit.Dashboard
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
@@ -9,9 +10,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.Settings
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContentProviderCompat.requireContext
 import coil.load
+import com.example.practice_fitbit.MainScreens.LoginScreen
+import com.example.practice_fitbit.R
 import com.example.practice_fitbit.databinding.ActivityProfileBinding
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
@@ -28,11 +36,51 @@ class Profile : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
     private val CAMERA_REQUEST_CODE = 1
     private val GALLERY_REQUEST_CODE = 2
+    private lateinit var savebutton : Button
+    private lateinit var backbtn: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        savebutton = findViewById(R.id.savebtn)
+        backbtn = findViewById(R.id.backbtn)
+
+        backbtn.setOnClickListener{
+            Toast.makeText(this@Profile,"Back to Dashboard",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, Dashboard::class.java))
+            finish()
+        }
+
+        savebutton.setOnClickListener {
+            Toast.makeText(this@Profile,"Profile Updated",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, Dashboard::class.java))
+            finish()
+        }
+
+
+        // get reference to the string array that we just created
+        val ages = resources.getStringArray(R.array.Age)
+        val height = resources.getStringArray(R.array.Height)
+        val weight = resources.getStringArray(R.array.Weight)
+
+        // create an array adapter and pass the required parameter
+        // in our case pass the context, drop down layout , and array.
+        val arrayAdapterage = ArrayAdapter(this, R.layout.dropdown_item, ages)
+        val arrayAdapterheight = ArrayAdapter(this, R.layout.dropdown_item, height)
+        val arrayAdapterweight = ArrayAdapter(this, R.layout.dropdown_item, weight)
+
+        // get reference to the autocomplete text view
+        val autocompleteTV1 = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView1)
+        val autocompleteTV2 = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView2)
+        val autocompleteTV3 = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView3)
+
+        // set adapter to the autocomplete tv to the arrayAdapter
+        autocompleteTV1.setAdapter(arrayAdapterage)
+        autocompleteTV2.setAdapter(arrayAdapterheight)
+        autocompleteTV3.setAdapter(arrayAdapterweight)
+
 
         //when you click on the image
         binding.profilelogo.setOnClickListener {
@@ -171,4 +219,3 @@ class Profile : AppCompatActivity() {
             }.show()
     }
 }
-
