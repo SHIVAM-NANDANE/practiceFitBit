@@ -44,6 +44,10 @@ dependencies {
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'com.google.firebase:firebase-auth-ktx:20.0.4'
+    implementation 'com.google.firebase:firebase-database:20.0.4'
+    implementation 'com.google.firebase:firebase-storage:20.0.1'
+    //Progress Dialog Library
+    implementation 'com.jpardogo.googleprogressbar:library:1.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
@@ -57,7 +61,7 @@ dependencies {
 
     //user permission
     implementation 'com.karumi:dexter:6.2.2'
-    //coil
+    //coroutine image loader
     implementation("io.coil-kt:coil:1.1.1")
 }
 apply plugin: 'com.android.application'

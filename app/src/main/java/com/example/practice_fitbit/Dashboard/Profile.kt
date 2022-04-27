@@ -1,6 +1,7 @@
 package com.example.practice_fitbit.Dashboard
 
 import android.app.Activity
+import android.app.Dialog
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.Settings
+import android.view.Window
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
@@ -20,7 +22,13 @@ import androidx.core.content.ContentProviderCompat.requireContext
 import coil.load
 import com.example.practice_fitbit.MainScreens.LoginScreen
 import com.example.practice_fitbit.R
+import com.example.practice_fitbit.User
 import com.example.practice_fitbit.databinding.ActivityProfileBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -38,14 +46,22 @@ class Profile : AppCompatActivity() {
     private val GALLERY_REQUEST_CODE = 2
     private lateinit var savebutton : Button
     private lateinit var backbtn: ImageButton
+    private lateinit var auth:FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
+    private lateinit var storageReference: StorageReference
+    private lateinit var imageUri : Uri
+    private lateinit var dialog: Dialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        savebutton = findViewById(R.id.savebtn)
+//        savebutton = findViewById(R.id.savebtn)
         backbtn = findViewById(R.id.backbtn)
+        auth = FirebaseAuth.getInstance()
+        val uid =  auth.currentUser?.uid
+        databaseReference = FirebaseDatabase.getInstance().getReference("Users")
 
         backbtn.setOnClickListener{
             Toast.makeText(this@Profile,"Back to Dashboard",Toast.LENGTH_SHORT).show()
@@ -53,10 +69,38 @@ class Profile : AppCompatActivity() {
             finish()
         }
 
-        savebutton.setOnClickListener {
-            Toast.makeText(this@Profile,"Profile Updated",Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, Dashboard::class.java))
-            finish()
+        binding.savebtn.setOnClickListener {
+            showProgressBar()
+            val firstName = binding.firstname.text.toString()
+            val lastName =  binding.lastname.text.toString()
+
+//            if (firstName.isEmpty() || lastName.isEmpty()){
+//                Toast.makeText(this, "Please enter text" ,Toast.LENGTH_SHORT).show()
+//            }
+
+            val user = User(firstName,lastName)
+            if(uid != null ){
+
+                databaseReference.child(uid).setValue(user).addOnCompleteListener {
+
+                    if (it.isSuccessful){
+
+                        uploadProfilePic()
+
+                    }else{
+                        hideProgressBar()
+                        Toast.makeText(this@Profile,"Failed to update profile",Toast.LENGTH_SHORT).show()
+                    }
+
+
+                }
+
+            }
+
+//            Toast.makeText(this@Profile,"Profile Updated",Toast.LENGTH_SHORT).show()
+//            startActivity(Intent(this, Dashboard::class.java))
+//            finish()
+
         }
 
 
@@ -99,6 +143,32 @@ class Profile : AppCompatActivity() {
             pictureDialog.show()
         }
 
+    }
+
+    private fun uploadProfilePic() {
+        imageUri = Uri.parse("android.resource://$packageName/${R.drawable.defaultprofile}")
+        storageReference = FirebaseStorage.getInstance().getReference("Users"+auth.currentUser?.uid)
+        storageReference.putFile(imageUri).addOnSuccessListener {
+            hideProgressBar()
+            Toast.makeText(this@Profile,"Profile successfuly uploaded",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, Dashboard::class.java))
+
+        }.addOnFailureListener {
+            hideProgressBar()
+            Toast.makeText(this@Profile,"Failed to update image",Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun showProgressBar(){
+        dialog = Dialog(this@Profile)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(R.layout.dialog_wait)
+        dialog.setCanceledOnTouchOutside(false)
+        dialog.show()
+    }
+
+    private fun hideProgressBar(){
+        dialog.dismiss()
     }
 
     private fun galleryCheckPermission() {

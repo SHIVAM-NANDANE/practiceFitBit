@@ -50,11 +50,24 @@
 
     <EditText android:layout_width="370dp"
               android:layout_height="50dp"
-              android:id="@+id/nameview"
+              android:id="@+id/firstname"
               android:layout_below="@+id/profilelogo"
               android:layout_marginTop="30dp"
               android:layout_marginLeft="20dp"
-              android:hint="Enter Name"
+              android:hint="First Name"
+              android:textColorHint="@color/black"
+              android:textSize="24dp"
+              android:gravity="center"
+              android:background="@android:drawable/btn_default"
+    />
+
+    <EditText android:layout_width="370dp"
+              android:layout_height="50dp"
+              android:id="@+id/lastname"
+              android:layout_below="@+id/firstname"
+              android:layout_marginTop="30dp"
+              android:layout_marginLeft="20dp"
+              android:hint="Last Name"
               android:textColorHint="@color/black"
               android:textSize="24dp"
               android:gravity="center"
@@ -69,7 +82,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/agedropdown"
             android:layout_margin="20dp"
-            android:layout_below="@id/nameview"
+            android:layout_below="@id/lastname"
             android:background="#DDD5D5"
     >
 
