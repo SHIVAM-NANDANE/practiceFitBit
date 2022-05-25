@@ -6,37 +6,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Dashboard.Dashboard"
+
 >
     <androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
                                        android:layout_height="wrap_content"
                                        app:title="@string/app_name"
                                        app:titleTextColor="@color/white"
-                                       android:background="#020D53"
+                                       android:background="#FF9800"
 
     />
 
     <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/accountlogo"
             android:layout_marginLeft="300dp"
-            android:background="#020D53"
+            android:background="#FF9800"
             android:src="@drawable/ic_baseline_account_circle_24"
             android:scaleType="fitXY"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
 
 
     />
 
     <ImageButton
             android:id="@+id/logoutbtn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="350dp"
-            android:background="#020D53"
+            android:background="#FF9800"
             android:src="@drawable/ic_baseline_logout_24"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:scaleType="fitXY"
+
     />
     <androidx.cardview.widget.CardView
             android:layout_width="350dp"
@@ -57,9 +59,10 @@
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:text="Exercises"
-                  android:textSize="40dp"
+                  android:textSize="40sp"
                   android:textStyle="bold"
-                  android:textColor="@color/white"
+                  android:layout_marginStart="20dp"
+                  android:textColor="#FBFAF9"
                   android:layout_marginTop="100dp"
         />
 
@@ -84,7 +87,9 @@
                   android:text="Diet Plan"
                   android:textSize="40dp"
                   android:textStyle="bold"
-                  android:textColor="@color/white"
+                  android:layout_marginLeft="20dp"
+                  android:paddingTop="25dp"
+                  android:textColor="#FBFAFA"
                   android:layout_marginTop="115dp"
         />
     </androidx.cardview.widget.CardView>
@@ -108,7 +113,8 @@
                   android:text="Exercise Video"
                   android:textSize="40dp"
                   android:textStyle="bold"
-                  android:textColor="@color/white"
+                  android:layout_marginLeft="20dp"
+                  android:textColor="#FFFDFD"
                   android:layout_marginTop="115dp"
         />
 

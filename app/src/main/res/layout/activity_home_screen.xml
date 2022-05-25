@@ -5,7 +5,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".MainScreens.HomeScreen"
-            android:background="#020D53">
+            android:background="#FF9800">
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -13,14 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainScreens.HomeScreen"
-        android:background="#020D53"
+        android:background="#FF9800"
         android:padding="10dp">
 
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="5dp"
             android:text="FitBit"
             android:textStyle="bold"
             android:textSize="24dp"
@@ -29,11 +28,11 @@
     </TextView>
 
     <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/homelogo"
             android:layout_marginLeft="255dp"
-            android:background="#020D53"
+            android:background="#FF9800"
             android:scaleType="fitXY"
             android:src="@drawable/ic_baseline_home_24"
 
@@ -41,12 +40,12 @@
     />
 
 
-    <ImageButton android:layout_width="40dp"
-                 android:layout_height="40dp"
+    <ImageButton android:layout_width="30dp"
+                 android:layout_height="30dp"
                  android:id="@+id/dietlogo"
                  android:layout_marginLeft="300dp"
-                 android:background="@color/purple_700"
-                 android:src="@drawable/dietlogo"
+                 android:background="#FF9800"
+                 android:src="@drawable/diet"
                  android:scaleType="fitXY"
 
     />
@@ -54,10 +53,10 @@
 
     <ImageButton
             android:id="@+id/logoutbtn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="350dp"
-            android:background="@color/purple_700"
+            android:background="#FF9800"
             android:src="@drawable/ic_baseline_logout_24"
     />
     
@@ -67,7 +66,7 @@
             android:id="@+id/card1"
             android:layout_width="180dp"
             android:layout_height="160dp"
-            android:background="#020D53"
+            android:background="#FF9800"
             android:layout_marginTop="60dp"
             app:cardCornerRadius="10dp"
     >
@@ -95,7 +94,7 @@
             android:id="@+id/card2"
             android:layout_width="180dp"
             android:layout_height="160dp"
-            android:background="#020D53"
+            android:background="#FF9800"
             android:layout_marginTop="60dp"
             android:layout_marginLeft="210dp"
             app:cardCornerRadius="10dp"
@@ -123,7 +122,7 @@
                 android:id="@+id/card3"
                 android:layout_width="180dp"
                 android:layout_height="160dp"
-                android:background="#020D53"
+                android:background="#FF9800"
                 app:cardCornerRadius="10dp"
                 android:layout_marginTop="260dp">
 
@@ -149,7 +148,7 @@
             android:id="@+id/card4"
             android:layout_width="180dp"
             android:layout_height="160dp"
-            android:background="#020D53"
+            android:background="#FF9800"
             android:layout_marginTop="260dp"
             app:cardCornerRadius="10dp"
             android:layout_marginLeft="210dp">
@@ -177,7 +176,7 @@
             android:id="@+id/card5"
             android:layout_width="180dp"
             android:layout_height="160dp"
-            android:background="#020D53"
+            android:background="#FF9800"
             app:cardCornerRadius="10dp"
             android:layout_marginTop="460dp">
 
@@ -203,7 +202,7 @@
             android:id="@+id/card6"
             android:layout_width="180dp"
             android:layout_height="160dp"
-            android:background="#020D53"
+            android:background="#FF9800"
             android:layout_marginTop="460dp"
             app:cardCornerRadius="10dp"
             android:layout_marginLeft="210dp">
@@ -230,7 +229,7 @@
     <ImageView android:layout_width="match_parent"
                android:id="@+id/rotatingimage"
                android:layout_height="100dp"
-               android:src="@drawable/text"
+               android:src="@drawable/text2"
                android:layout_marginTop="650dp"
 
     />

@@ -5,45 +5,60 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#020D53"
+            android:background="#FF9800"
             tools:context=".Cards.Card5">
 
     <include layout="@layout/common_toolbar"/>
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Abs"
+              android:id="@+id/textview5"
+              android:gravity="center"
+              android:layout_marginTop="50dp"
+              android:textColor="@color/white"
+              android:textSize="25sp"
+              android:textStyle="bold"
+              android:background="@color/purple_700"
+    />
 
-                  android:text="Abs"
-                  android:id="@+id/textview5"
-                  android:gravity="center"
-                  android:layout_marginTop="50dp"
-                  android:textColor="@color/white"
-                  android:textSize="25sp"
-                  android:textStyle="bold"
-        />
+    <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="startTimeCounter"
+            android:text="Start Timer"
+            android:backgroundTint="#1248D1"
+            android:textStyle="bold" android:layout_centerInParent="true"/>
+    <TextView
+            android:id="@+id/countTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
 
 
-        <pl.droidsonroids.gif.GifImageView
-                android:id="@+id/abs"
-                android:layout_width="410dp"
-                android:layout_height="300dp"
-                android:src="@drawable/crunches"
-                android:layout_below="@+id/textview5"
-                android:scaleType="fitXY"
+    <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/abs"
+            android:layout_width="410dp"
+            android:layout_height="300dp"
+            android:src="@drawable/crunches"
+            android:layout_below="@+id/textview5"
+            android:scaleType="fitXY"
 
-        />
-
-
+            android:layout_marginTop="-7dp"/>
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:id="@+id/absscroll"
               android:paddingTop="25sp"
               android:text="@string/Abs"
-              android:gravity="center"
               android:textColor="#FDFDFD"
               android:scrollbars="vertical"
               android:textSize="18dp"
-              android:layout_below="@+id/abs"
+              android:layout_below="@+id/countTime"
               android:layout_marginTop="11dp"/>
 
     </RelativeLayout>

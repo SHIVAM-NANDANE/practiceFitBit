@@ -43,7 +43,7 @@ class DietPlan : AppCompatActivity() {
 
 
         acclogo.setOnClickListener {
-            startActivity(Intent(this, Profile::class.java))
+            startActivity(Intent(this, Gallery::class.java))
 
         }
 

@@ -22,6 +22,7 @@
             android:layout_height="60dp"
             android:id="@+id/videobtn"
             android:text="Goto Homescreen"
+            android:textColor="@color/white"
             app:cornerRadius="40dp"
             android:textAllCaps="false"
             android:layout_marginLeft="240dp"

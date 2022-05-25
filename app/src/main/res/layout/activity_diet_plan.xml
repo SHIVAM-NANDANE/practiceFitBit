@@ -10,10 +10,11 @@
 
 <LinearLayout
         android:id="@+id/vegdietid"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".Dashboard.DietPlan">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".Dashboard.DietPlan">
 
 
         <include layout="@layout/common_toolbar"/>
@@ -65,6 +66,7 @@ tools:context=".Dashboard.DietPlan">
                   android:layout_height="265dp"
                   android:text="@string/vegbowl"
                   android:textSize="16dp"
+                  android:background="@color/white"
                   android:textColor="@color/black"
         />
 

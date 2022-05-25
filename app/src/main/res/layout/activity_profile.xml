@@ -2,17 +2,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             tools:context=".Dashboard.Profile"
             android:background="@drawable/profileback"
 >
 
 <RelativeLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
+        android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".Dashboard.Profile"
 
@@ -25,6 +22,7 @@
             android:src="@drawable/ic_baseline_arrow_back_ios_24"
             android:background="@color/white"
             android:backgroundTint="#ECD4CD"
+            android:contentDescription="backbutton"
 
     />
 
@@ -33,10 +31,12 @@
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="Save"
+            android:textColor="@color/black"
             android:textAllCaps="false"
-            android:backgroundTint="@color/black"
-            android:layout_below="@id/weightdropdown"
+            android:backgroundTint="#D1C4C4"
+            android:layout_marginTop="680dp"
             android:layout_centerHorizontal="true"
+
     />
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -46,111 +46,115 @@
             android:layout_marginLeft="120dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/profile1"
+
     />
 
-    <EditText android:layout_width="370dp"
-              android:layout_height="50dp"
+
+    <EditText android:layout_width="291dp"
+              android:layout_height="62dp"
               android:id="@+id/firstname"
               android:layout_below="@+id/profilelogo"
               android:layout_marginTop="30dp"
-              android:layout_marginLeft="20dp"
+              android:layout_marginLeft="50dp"
               android:hint="First Name"
               android:textColorHint="@color/black"
-              android:textSize="24dp"
-              android:gravity="center"
+              android:textSize="16dp"
               android:background="@android:drawable/btn_default"
     />
-
-    <EditText android:layout_width="370dp"
-              android:layout_height="50dp"
+    <EditText android:layout_width="298dp"
+              android:layout_height="61dp"
               android:id="@+id/lastname"
               android:layout_below="@+id/firstname"
-              android:layout_marginTop="30dp"
-              android:layout_marginLeft="20dp"
+              android:layout_marginTop="23dp"
+              android:layout_marginLeft="50dp"
               android:hint="Last Name"
               android:textColorHint="@color/black"
-              android:textSize="24dp"
-              android:gravity="center"
+              android:textSize="16dp"
               android:background="@android:drawable/btn_default"
     />
-
-    <!--Create a TextInputLayout and choose the style,
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lastname"
+            android:padding="30dp"
+    >
+        <!--Create a TextInputLayout and choose the style,
         for now we are choosing the OutlinedBox ExposedDropdownMenu   -->
-    <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/agedropdown"
-            android:layout_margin="20dp"
-            android:layout_below="@id/lastname"
-            android:background="#DDD5D5"
-    >
 
-        <!-- Inside text input layout add
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:id="@+id/agedropdown"
+                android:background="#DDD5D5"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+            <!-- Inside text input layout add
               an auto complete text view
                 and make its input type to none-->
-        <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView1"
+            <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView1"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:text="Select Age"
+
+            />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:inputType="none"
-                android:text="Select Age"
+                android:layout_height="wrap_content"
+                android:id="@+id/heightdropdown"
+                android:layout_margin="20dp"
+                android:layout_below="@id/agedropdown"
+                android:background="#DDD5D5"
+        >
 
-        />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/heightdropdown"
-            android:layout_margin="20dp"
-            android:layout_below="@id/agedropdown"
-            android:background="#DDD5D5"
-    >
-
-        <!-- Inside text input layout add
+            <!-- Inside text input layout add
               an auto complete text view
                 and make its input type to none-->
-        <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView2"
+            <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Select Height"
+
+            />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:inputType="none"
-                android:text="Select Height"
+                android:layout_height="wrap_content"
+                android:id="@+id/weightdropdown"
+                android:layout_margin="20dp"
+                android:layout_below="@id/heightdropdown"
+                android:background="#DDD5D5"
+        >
 
-        />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/weightdropdown"
-            android:layout_margin="20dp"
-            android:layout_below="@id/heightdropdown"
-            android:background="#DDD5D5"
-    >
-
-        <!-- Inside text input layout add
+            <!-- Inside text input layout add
               an auto complete text view
                 and make its input type to none-->
-        <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:inputType="none"
-                android:text="Select Weight"
+            <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Select Weight"
 
-        />
+            />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
 </ScrollView>

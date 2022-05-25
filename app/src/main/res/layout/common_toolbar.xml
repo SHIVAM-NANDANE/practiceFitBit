@@ -8,16 +8,16 @@
         android:id="@+id/common_toolbar"
         app:title="@string/app_name"
         app:titleTextColor="@color/white"
-        android:background="#020D53">
+        android:background="#FF9800">
 
 
     <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/homelogo"
             android:layout_marginLeft="195dp"
-            android:background="#020D53"
-            android:src="@drawable/exerciselogo2"
+            android:background="#FF9800"
+            android:src="@drawable/fitness"
             android:scaleType="fitXY"
             android:layout_marginTop="10dp"
 
@@ -29,17 +29,19 @@
             android:id="@+id/profilelogo"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="#020D53"
+            android:background="#FF9800"
             android:src="@drawable/ic_baseline_account_circle_24"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
     />
 
     <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/logoutbtn"
-            android:background="#020D53"
+            android:background="#FF9800"
             android:src="@drawable/ic_baseline_logout_24"
+            android:layout_marginLeft="10dp"
     />
 
 </androidx.appcompat.widget.Toolbar>

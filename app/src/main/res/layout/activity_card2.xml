@@ -4,24 +4,42 @@
             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:background="#020D53"
+            android:background="#FF9800"
             android:layout_height="match_parent"
             tools:context=".Cards.Card2">
 
     <include layout="@layout/common_toolbar"/>
 
 
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Squats"
+              android:id="@+id/textview2"
+              android:gravity="center"
+              android:layout_marginTop="50dp"
+              android:textColor="@color/white"
+              android:textSize="25sp"
+              android:textStyle="bold"
+              android:background="@color/purple_700"
+    />
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="Squats"
-                  android:id="@+id/textview2"
-                  android:gravity="center"
-                  android:layout_marginTop="50dp"
-                  android:textColor="@color/white"
-                  android:textSize="25sp"
-                  android:textStyle="bold"
-        />
+    <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="startTimeCounter"
+            android:text="Start Timer"
+            android:backgroundTint="#1248D1"
+            android:textStyle="bold" android:layout_centerInParent="true"/>
+    <TextView
+            android:id="@+id/countTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
 
 
         <pl.droidsonroids.gif.GifImageView
@@ -36,16 +54,15 @@
 
 
     <TextView
-              android:id="@+id/squatsscroll"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:paddingTop="25sp"
-              android:text="@string/Squats"
-              android:gravity="center"
-              android:textColor="#FDFDFD"
-              android:scrollbars="vertical"
-              android:textSize="18dp"
-              android:layout_below="@+id/squats"
-              android:layout_marginTop="11dp"/>
+            android:id="@+id/squatsscroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="25sp"
+            android:text="@string/Squats"
+            android:textColor="#FDFDFD"
+            android:scrollbars="vertical"
+            android:textSize="18dp"
+            android:layout_below="@+id/countTime"
+            android:layout_marginTop="11dp"/>
 
     </RelativeLayout>
